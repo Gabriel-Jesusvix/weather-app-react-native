@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        run: npm testf
+        run: npm test
 
   CD: 
     name: Continuous Delivery
