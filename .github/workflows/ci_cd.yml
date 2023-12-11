@@ -1,13 +1,31 @@
-name: CI/CD
+name: CI / CD
 
 on:
   push:
-    run: npm install
+    branches:
+      - develop
 
-    - name: Run Tests
-      run: npm test
+jobs:
+  CI:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
 
-  CD: 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm testf
+
+   CD: 
     name: Continuous Delivery
     runs-on: ubuntu-latest
 
