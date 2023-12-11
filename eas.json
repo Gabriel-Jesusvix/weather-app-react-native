@@ -24,7 +24,7 @@
     "preview": {
       "android": {
         "track": "internal",
-        "servicesAccountKeyPath": "./google-services.json",
+        "servicesAccountKeyPath": "google-services.json",
         "releaseStatus": "draft"
       }
     }
